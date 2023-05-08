@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+    //width = largura; height = altura
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d'); //gráfico em 2D
+
+    pincel.fillStyle = 'white'; //sempre vem antes do fillRect e ela funciona como uma variável
+    pincel.fillRect(0, 0, 600, 400); //fillRect = preencher um retângulo (x,y, largura, altura)
+
+    pincel.fillStyle = 'Red'; //sempre vem antes do fillRect e ela funciona como uma variável
+    pincel.fillRect(0, 0, 200, 400); //fillRect = preencher um retângulo (x,y, largura, altura)
+
+    pincel.fillStyle = 'Black'; //sempre vem antes do fillRect e ela funciona como uma variável
+    pincel.fillRect(400, 0, 200, 400); //fillRect = preencher um retângulo (x,y, largura, altura)
+
+    pincel.fillStyle = 'grey';
+    pincel.beginPath(); //begin path serve para dizer qual será a direção seguida pelo pincel.
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath(); //begin path serve para dizer qual será a direção seguida pelo pincel.
+    pincel.arc(300, 200, 50, 0, 2 * 3.14); //arc responsável por criar circunferências
+    pincel.fill();
+</script>

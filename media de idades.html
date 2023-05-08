@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+
+    function pularLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostraIdade(frase) { // variável frase dentro do parâmetro mostraIdade
+        document.write(frase);
+    }
+    var alan = 28; var alef = 29; var patricia = 48; var arthur = 2;
+
+    mostraIdade("Idade de Alan é: " + (alan) + "<br>"); //mostraIdade = Função - chamando os parâmetros que estão dentro do parenteses e jogando-os dentro da variável frase. 
+    mostraIdade("Idade de Alef é: " + (alef) + "<br>");
+    mostraIdade("Idade de Patricia é: " + (patricia) + "<br>");
+    mostraIdade("Idade de Arthur é: " + (arthur));
+    pularLinha();
+
+    var media = (alan + alef + patricia + arthur) / 4; 6
+    document.write("Média das idades: " + Math.round(media));
+</script>

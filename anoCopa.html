@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+        document.write("<br><hr><br>");
+    }
+
+    function mostra(frase) {
+        document.write("<big>" + frase + "</big>");
+        pulaLinha();
+    }
+
+    var limite = parseInt(prompt("Entre com um ano e veja quais foram os campeonatos anteriores da Copa do Mundo: "));
+    var anoCopa = 1930;
+    while (anoCopa <= limite) { //while: repetição
+        mostra("Houve copa em: " + anoCopa);
+        anoCopa = anoCopa + 4; //recebimento de variavél + valor para avançar a repetição
+    }
+    mostra("Fim!")
+
+</script>

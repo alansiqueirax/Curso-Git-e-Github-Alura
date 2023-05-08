@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Compare com o meu número</button> 
+
+<script>
+    var segredo = 5;
+
+    var input = document.querySelector("input"); //querySelector pega o nome da tag, no caso a entrada (<input />) //<buttton> aciona a inserção de botão na página
+
+    function verifica() {
+
+        if (input.value == segredo) { //value guardará um valor em input, que será digitado pelo usuário e será comparado à variável segredo
+
+            alert("Você acertou!");
+        } else {
+
+            alert("Você errou!");
+        }
+            input.value = ""; //esvazia o valor inputado
+            input.focus(); //limpa o valor da caixa criada
+    }
+
+    var button = document.querySelector("button"); //querySelector pega o nome da tag, no caso a entrada (<button>)
+
+    button.onclick = verifica; //onclick = assim que clicar no botão ele carrega as condições da função
+
+</script>

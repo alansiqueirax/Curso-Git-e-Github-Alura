@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Compare com o meu segredo</button>
+
+<script>
+
+    var segredos = [5, 7, 10, 2, 3]; //todo array funciona começando da contagem por 0. Então, neste exemplo: [0], [1], [2], [3], [4]
+
+    var input = document.querySelector("input"); //querySelector pega o nome da tag, no caso a entrada (<input />) //<buttton> aciona a inserção de botão na página
+    input.focus(); //limpa o valor da caixa criada
+
+    function verifica() {
+
+        var achou = false; //deixar o valor falso para que a condição do if dentro do for funcione
+
+        for (var posicao = 0; posicao < segredos.length; posicao++) { //.length serve para percorrer uma array
+
+            if (input.value == segredos[posicao]) {
+
+                alert("Você acertou!");
+                achou = true;
+                break;
+            }
+        }
+
+        if (achou == false) {
+            alert("Você errou!");
+        }
+
+        input.value = ""; //esvazia o valor inputado
+        input.focus(); //limpa o valor da caixa criada
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>

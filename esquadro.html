@@ -1,0 +1,20 @@
+<canvas width="400" height="600">
+
+</canvas>
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.moveTo(50, 50); //topo do esquadro
+    pincel.lineTo(50, 400); //base do esquadro
+    pincel.lineTo(400, 400); //base do esquadro
+    pincel.fill();
+
+    pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.moveTo(100, 175); //topo do esquadro branco
+    pincel.lineTo(100, 350); //base do esquadro branco
+    pincel.lineTo(275, 350); //base do esquadro
+    pincel.fill();
+</script>

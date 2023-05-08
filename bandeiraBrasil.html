@@ -1,0 +1,32 @@
+<canvas width="600" height="400"></canvas>
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d'); //gráfico em 2D
+
+    //fundo
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 600, 400);
+
+    //losango1
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 50); //topo do esquadro
+    pincel.lineTo(50, 200); //base do esquadro
+    pincel.lineTo(550, 200); //base do esquadro
+    pincel.fill();
+
+    //losango2
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 350); //topo do esquadro
+    pincel.lineTo(50, 200); //base do esquadro
+    pincel.lineTo(550, 200); //base do esquadro
+    pincel.fill();
+
+    //circulo
+    pincel.fillStyle = 'blue';
+    pincel.beginPath(); //begin path serve para dizer qual será a direção seguida pelo pincel.
+    pincel.arc(300, 200, 90, 0, 2 * 3.14); //arc responsável por criar circunferências
+    pincel.fill();
+</script>
